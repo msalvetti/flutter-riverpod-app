@@ -5,7 +5,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'state_providers.g.dart';
 
-@riverpod
+@Riverpod(keepAlive: true)
 class Counter extends _$Counter {
   @override
   int build() {
@@ -38,7 +38,7 @@ class DarkMode extends _$DarkMode {
 
 // Username state provider manejara un String con un valor por default y tendra
 // un metodo para cambiar el valor del estado, llamado "changeName( String name )"
-@riverpod
+@Riverpod(keepAlive: true)
 class Username extends _$Username {
   String name = 'Mariano Herrera';
 
